@@ -1,0 +1,59 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: purple;
+  height: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+  flex: 200px;
+}
+
+/* Flexbox CSS */
+
+section {
+  display: flex;
+  /*flex-flow shorthand*/
+  flex-flow: row wrap;
+}
+
+/*we're giving each <article> element the same value (a value of 1), which means they'll all take up an equal amount of the spare space left after properties like padding and margin have been set.*/
+article {
+  flex: 1 200px;
+}
+
+/*the third <article> takes up twice as much of the available width as the other two*/
+article:nth-of-type(3) {
+  flex: 3 200px;
+  display: flex;
+  flex-flow: column;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox#ordering_flex_items*/
+
+button:first-child {
+  order: 1;
+}
+
